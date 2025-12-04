@@ -1,64 +1,45 @@
-
 body {
-  margin: 0;
-  padding: 0;
-  background: #ADD8E6;
-  font-family: 'Century Gothic', sans-serif;
+background: #ADD8E6;
+font-family: 'Century Gothic', sans-serif;
+}
+h1 {
+color: lightslategray;
+text-align: center;
 }
 
-/* Page heading */
-h1 { color: lightslategray; text-align: center; }
 
-
-/* make the projects area a centered, constrained row (no HTML changes needed) */
-.projects {
-  width: 100%;
-  max-width: 1200px;      /* controls how wide the cards area can get */
-  margin: 0 auto;         /* centers the whole .projects block on the page */
-  box-sizing: border-box;
-  padding: 20px 16px;     /* spacing inside the block */
-  
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center; /* center project cards inside the constrained width */
-  align-items: flex-start;
-}
-
-/* force the section heading onto its own row and center it */
+.projects
+{
+    display:flex; flex-wrap:wrap;
+} /* condensed to save space */
 .projects h2 {
-  flex-basis: 100%;   /* take the full row */
-  width: 100%;
-  margin: 0 0 24px 0;
-  text-align: center; /* centers "Highlighted projects" above the cards */
+    /* display the h2 on its own line, not with the section blobs */
+    width: 100%;
 }
-
-/* project cards stay the same but tightened up a bit */
-.project {
-  flex: 0 1 300px;    /* don't grow too wide; shrink when needed */
-  max-width: 320px;
-  background: white;
-  padding: 15px;
-  border-radius: 15px;
-  box-sizing: border-box;
+.project
+{
+width: 30%;
+margin: 10px;
+padding: 20px 10px;
+background: white;
+border-radius: 25%;
 }
-
-/* images */
+.project h3 {
+    /* pull the h3 text away from the left blob wall */
+    margin-left: 50px;
+}
 .project img {
-  width: 90%;
-  max-height: 180px;
-  display: block;
-  margin: 10px auto;
-  border: 2px solid navy;
+    /* adjust your image sizes as needed */
+    width: 400px;
+    height: 300px;
+    margin: 10px auto;
+    border: 2px solid navy;
+    display: block;
+    /* center the images inside the blobs */
+    text-align: center;
 }
-
-/* caption */
 .project p {
-  text-align: center;
-  margin: 15px 10px 5px;
-}
-
-/* add space under your skills (if you still need a gap) */
-.skills {
-  margin-bottom: 40px;
+    /* center the p text in the blob */
+    text-align: center;
+    margin: 15px;
 }
