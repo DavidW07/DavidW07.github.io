@@ -10,40 +10,32 @@ body {
 h1 { color: lightslategray; text-align: center; }
 
 
+/* make the projects area a centered, constrained row (no HTML changes needed) */
 .projects {
-  width: 100%;               
+  width: 100%;
+  max-width: 1200px;      /* controls how wide the cards area can get */
+  margin: 0 auto;         /* centers the whole .projects block on the page */
   box-sizing: border-box;
-  padding: 20px 16px;        
+  padding: 20px 16px;     /* spacing inside the block */
+  
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  justify-content: center;   /* center the cards row inside the full-width area */
+  justify-content: center; /* center project cards inside the constrained width */
   align-items: flex-start;
 }
 
-
+/* force the section heading onto its own row and center it */
 .projects h2 {
-  flex-basis: 100%;        
+  flex-basis: 100%;   /* take the full row */
   width: 100%;
-  margin: 0 0 24px 0;       
-  text-align: center;       
+  margin: 0 0 24px 0;
+  text-align: center; /* centers "Highlighted projects" above the cards */
 }
 
-/* Restrict the card row to a readable width while centering it on the page */
-.projects .cards-wrapper {
-  width: 100%;
-  max-width: 1200px;         /* controls how wide the cards area can get */
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  margin: 0 auto;            /* center the wrapper inside the full-width .projects */
-  box-sizing: border-box;
-}
-
-
+/* project cards stay the same but tightened up a bit */
 .project {
-  flex: 1 1 250px;
+  flex: 0 1 300px;    /* don't grow too wide; shrink when needed */
   max-width: 320px;
   background: white;
   padding: 15px;
@@ -60,8 +52,13 @@ h1 { color: lightslategray; text-align: center; }
   border: 2px solid navy;
 }
 
-/* description text */
+/* caption */
 .project p {
   text-align: center;
   margin: 15px 10px 5px;
+}
+
+/* add space under your skills (if you still need a gap) */
+.skills {
+  margin-bottom: 40px;
 }
