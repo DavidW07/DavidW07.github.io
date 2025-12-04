@@ -1,42 +1,57 @@
+
 body {
-    background: #ADD8E6;
-    font-family: 'Century Gothic', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ADD8E6;
+  font-family: 'Century Gothic', sans-serif;
 }
 
-h1 {
-    color: lightslategray;
-    text-align: center;
-}
+/* Page heading */
+h1 { color: lightslategray; text-align: center; }
 
-/* container */
+
 .projects {
+  width: 100%;               
+  box-sizing: border-box;
+  padding: 20px 16px;        
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;   /* center the cards row inside the full-width area */
+  align-items: flex-start;
+}
+
+
+.projects h2 {
+  flex-basis: 100%;        
+  width: 100%;
+  margin: 0 0 24px 0;       
+  text-align: center;       
+}
+
+/* Restrict the card row to a readable width while centering it on the page */
+.projects .cards-wrapper {
+  width: 100%;
+  max-width: 1200px;         /* controls how wide the cards area can get */
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
-  align-items: flex-start;
+  margin: 0 auto;            /* center the wrapper inside the full-width .projects */
+  box-sizing: border-box;
 }
 
-/* force the heading onto its own line */
-.projects h2 {
-  flex-basis: 100%;   /* take full row */
-  width: 100%;
-  margin: 0 0 20px 0; /* tidy spacing under the heading */
-  text-align: left;   /* or center if you prefer */
-  padding-left: 10px; /* optional, for alignment with cards */
-}
 
-/* project cards (smaller, centered, consistent) */
 .project {
-  flex: 1 1 250px;   /* base width, grows/shrinks */
-  max-width: 320px;  /* card max width */
+  flex: 1 1 250px;
+  max-width: 320px;
   background: white;
   padding: 15px;
   border-radius: 15px;
   box-sizing: border-box;
 }
 
-/* images inside cards */
+/* images */
 .project img {
   width: 90%;
   max-height: 180px;
@@ -45,7 +60,7 @@ h1 {
   border: 2px solid navy;
 }
 
-/* card caption */
+/* description text */
 .project p {
   text-align: center;
   margin: 15px 10px 5px;
