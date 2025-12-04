@@ -31,10 +31,12 @@ min-height: 500px;
 }
 .project img {
     /* adjust your image sizes as needed */
-    width: 400px;
-    height: 300px;
+    width: 100%;
+    height: auto;
+    max-height: 200%;
+    object-fit: contain;
     margin: 10px auto;
-    border: 2px solid navy;
+    border: none;
     display: block;
     /* center the images inside the blobs */
     text-align: center;
