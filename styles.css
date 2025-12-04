@@ -8,37 +8,45 @@ h1 {
     text-align: center;
 }
 
+/* container */
 .projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
 }
 
+/* force the heading onto its own line */
+.projects h2 {
+  flex-basis: 100%;   /* take full row */
+  width: 100%;
+  margin: 0 0 20px 0; /* tidy spacing under the heading */
+  text-align: left;   /* or center if you prefer */
+  padding-left: 10px; /* optional, for alignment with cards */
+}
+
+/* project cards (smaller, centered, consistent) */
 .project {
-    flex: 1 1 250px;  
-    max-width: 300px;
-    background: white;
-    padding: 12px;    
-    border-radius: 15px;
-
-
+  flex: 1 1 250px;   /* base width, grows/shrinks */
+  max-width: 320px;  /* card max width */
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-sizing: border-box;
 }
 
-.project h3 {
-    text-align: center;
-}
-
+/* images inside cards */
 .project img {
-    width: 100%;
-    height: auto;
-    max-height: 250px;
-    border: 2px solid navy;
-    display: block;
-    margin: 10px auto;
+  width: 90%;
+  max-height: 180px;
+  display: block;
+  margin: 10px auto;
+  border: 2px solid navy;
 }
 
+/* card caption */
 .project p {
-    text-align: center;
-    margin: 15px;
+  text-align: center;
+  margin: 15px 10px 5px;
 }
