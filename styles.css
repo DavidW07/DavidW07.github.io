@@ -31,9 +31,9 @@ min-height: 500px;
 }
 .project img {
     /* adjust your image sizes as needed */
-    width: 90%;
+    width: 75%;
     height: auto;
-    max-height: 200%;
+    max-height: 150%;
     object-fit: contain;
     margin: 10px auto;
     border: none;
